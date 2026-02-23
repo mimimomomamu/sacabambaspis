@@ -22,15 +22,20 @@ p {
 <h2 id="timer">00:00</h2>
 <img src="sacabambaspis.jpg" alt="oh no hes watching">
 <script>
-let totalSeconds = 0;
-setInterval(function() {
-    totalSeconds++;
-    let minutes = Math.floor(totalSeconds / 60);
-    let seconds = totalSeconds % 60;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-    document.getElementById("timer").textContent = minutes + ":" + seconds;
-}, 1000);
+    let totalSeconds = 0;
+
+    setInterval(function() {
+      totalSeconds++;
+
+      let minutes = Math.floor(totalSeconds / 60);
+      let seconds = totalSeconds % 60;
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      document.getElementById("timer").textContent = minutes + ":" + seconds;
+    }, 1000);
+  </script>
 </script>
 </style>
 </head>

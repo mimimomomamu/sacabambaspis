@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    text-align: center;
+}
+body {
+    background-color: teal;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+}
+p {
+    font-size: 18px;
+}
+</style>
+<h1>Sacabambaspis has been staring into your soul for</h1>
+<h2 id="timer">00:00</h2>
+<script>
+let totalSeconds = 0;
+setInterval(function() {
+    totalSeconds++;
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds % 60;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    document.getElementById("timer").textContent = minutes + ":" + seconds;
+}, 1000);
+</script>
+</style>
+</head>
+<body>
+<title>the sacabambaspis</title>
+
+<img src="sacabambaspis.png" alt="Sacabambaspis">
+
+</body>
+</html>

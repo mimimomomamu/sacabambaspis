@@ -4,49 +4,63 @@
     <title>The Sacabambaspis</title>
     <style>
         body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             background-color: teal;
             color: #FFFFFF;
             font-family: Ubuntu, sans-serif;
         }
+
         h1 {
-            color: #FFFFFF;
-            text-align: center;
+            margin-bottom: 10px;
         }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
         p {
             font-size: 18px;
+        }
+
+        /* Image animation */
+        img {
+            width: 200px;
+            animation: grow 20s linear infinite; 
+        }
+
+        @keyframes grow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>   
-  <h1>Sacabambaspis has been staring into your soul for</h1>
-  <h2 id="timer">00:00</h2>
-  body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-    }
+    <h1>Sacabambaspis has been staring into your soul for</h1>
+    <h2 id="timer">00:00</h2>
 
-    img {
-      width: 200px; 
-  }
-  <img src="sacabambaspis.png" alt="oh no hes watching">
+    <img src="sacabambaspis.png" alt="oh no hes watching">
 
-  <script>
-    let totalSeconds = 0;
+    <script>
+        let totalSeconds = 0;
 
-    setInterval(function() {
-      totalSeconds++;
+        setInterval(function() {
+            totalSeconds++;
 
-      let minutes = Math.floor(totalSeconds / 60);
-      let seconds = totalSeconds % 60;
+            let minutes = Math.floor(totalSeconds / 60);
+            let seconds = totalSeconds % 60;
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      document.getElementById("timer").textContent = minutes + ":" + seconds;
-    }, 1000);
-  </script>
+            document.getElementById("timer").textContent = minutes + ":" + seconds;
+        }, 1000);
+    </script>
 </body>
 </html>
